@@ -1,0 +1,9 @@
+{
+  "name": "bacend-root",
+  "private": true,
+  "scripts": {
+    "test:content": "cd content-service && npm test",
+    "test:admin": "cd admin-service && npm test",
+    "test:all": "npm run test:content && npm run test:admin"
+  }
+}

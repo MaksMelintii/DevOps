@@ -2,10 +2,9 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import adminRoutes from "./routes/adminRoutes.js";
+import app from "./app.js";
 
 dotenv.config();
-
-const app = express();
 const PORT = process.env.PORT || 3003;
 
 app.use(cors());
