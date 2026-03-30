@@ -1,11 +1,38 @@
 version: "3.9"
 
 services:
-  backend:
-    build: .
-    container_name: node_backend
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
     ports:
       - "3000:3000"
-    restart: always
     env_file:
-      - .env
+      - ./api-gateway/.env
+    depends_on:
+      - auth-service
+      - content-service
+      - admin-service
+
+  auth-service:
+    build: ./auth-service
+    container_name: auth-service
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./auth-service/.env
+
+  content-service:
+    build: ./content-service
+    container_name: content-service
+    ports:
+      - "3002:3002"
+    env_file:
+      - ./content-service/.env
+
+  admin-service:
+    build: ./admin-service
+    container_name: admin-service
+    ports:
+      - "3003:3003"
+    env_file:
+      - ./admin-service/.env
