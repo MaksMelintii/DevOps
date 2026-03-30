@@ -2,8 +2,10 @@
   "name": "bacend-root",
   "private": true,
   "scripts": {
+    "test:auth": "cd auth-service && npm test",
     "test:content": "cd content-service && npm test",
     "test:admin": "cd admin-service && npm test",
-    "test:all": "npm run test:content && npm run test:admin"
+    "test:gateway": "cd api-gateway && npm test",
+    "test:all": "npm run test:auth && npm run test:content && npm run test:admin && npm run test:gateway"
   }
 }

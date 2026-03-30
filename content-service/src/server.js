@@ -6,6 +6,7 @@ import articleRoutes from "./routes/articleRoutes.js";
 import authorRoutes from "./routes/authorRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import tagRoutes from "./routes/tagRoutes.js";
+import app from "./app.js"
 
 dotenv.config();
 
