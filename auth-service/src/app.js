@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/auth", authRoutes);
+app.use("/api/auth", authRoutess);
 
 app.get("/health", (req, res) => {
   res.json({ service: "auth-service", status: "ok" });
